@@ -1,0 +1,134 @@
+$navigation-background: #6F834D;
+$navigation-text-color: #white;
+$navigation-hover: #f1f1f1;
+
+.navbar {
+    padding: 0;
+    background: $navigation-background;
+}
+
+.navigation-container {
+    position: relative;
+    display: block;
+}
+
+.navigation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    background: $navigation-background;
+}
+
+.navigation-item {
+    flex: 1 1 auto;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover, &:active {
+        color: #f1f1f1;
+        background: darken($navigation-background, 10%);
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+
+    a {
+        color: white;
+        cursor: pointer;
+        padding: 40px 20px;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        &:hover, &:active {
+            text-decoration: none;
+            color: $navigation-hover;
+        }
+
+    }
+
+    i,
+    span {
+        margin: rem(5) 0;
+    }
+
+    span {
+        font-weight: bold;
+    }
+
+    i {
+        font-size: rem(50);
+    }
+
+}
+
+.nav-active {
+    color: $navigation-hover;
+    background: darken($navigation-background, 5%);
+}
+
+@include media($md-down) {
+
+    .navigation-item {
+        display: flex;
+        flex-direction: row;
+        padding: rem(5) rem(15);
+
+        &:active, &:hover {
+            box-shadow: none;
+        }
+
+        a {
+            padding: 10px 5px;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            i {
+                min-width: rem(75);
+            }
+
+            span {
+                font-size: rem(28);
+                padding-left: rem(15);
+            }
+        }
+
+    }
+
+    .navigation-list {
+        flex-direction: column;
+    }
+}
+
+@include media($xxl-up) {
+    .navigation-item {
+        display: flex;
+        flex-direction: row;
+        padding: rem(10) rem(15);
+        align-items: center;
+
+        a {
+            i {
+                font-size: rem(100);
+                min-width: rem(100);
+            }
+
+            span {
+                font-size: rem(58);
+                padding-left: rem(15);
+            }
+        }
+    }
+}
+
+// #6F834D (dunkel)
+// #BAC7A7 (hell)

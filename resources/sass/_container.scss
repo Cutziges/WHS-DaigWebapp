@@ -1,0 +1,41 @@
+@include media($xxl-up) {
+    .container {
+        max-width: 100%;
+        padding-right: rem(100);
+        padding-left: rem(100);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    p, body, strong, a, ul, li {
+        font-size: rem(65);
+    }
+
+    i {
+        font-size: rem(80);
+    }
+
+    h1 {
+        font-size: rem(120);
+    }
+
+    h2 {
+        font-size: rem(110);
+    }
+
+    h3 {
+        font-size: rem(100);
+    }
+
+    h4 {
+        font-size: rem(90);
+    }
+
+    h5 {
+        font-size: rem(70);
+    }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon, .carousel-control-next, .carousel-control-prev {
+        font-size: rem(90);
+    }
+}

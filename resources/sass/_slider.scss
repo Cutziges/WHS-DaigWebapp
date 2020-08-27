@@ -1,0 +1,10 @@
+$background-color: #e5e4cc;
+$background-active: rgb(229, 228, 204);
+
+.slider-active {
+    background: $background-active;
+}
+
+.slider {
+    background: $background-color;
+}

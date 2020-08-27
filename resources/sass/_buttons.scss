@@ -1,0 +1,227 @@
+.food {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%), #d0cec3;
+
+    &:hover, &:before, &:active, &:focus {
+        background-color: darken(#d0cec3, 20%);
+        transition: all .3s;
+    }
+}
+
+.art {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%), #9da381;
+
+    &:hover, &:before, &:active, &:focus {
+        background-color: darken(#9da381, 10%);
+        transition: all .3s;
+    }
+}
+
+.sport {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%), #c8d5b9;
+
+    &:hover, &:before, &:active, &:focus {
+        background-color: darken(#c8d5b9, 20%);
+        transition: all .3s;
+    }
+}
+
+.nature {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%), #faf3dd;
+
+    &:hover, &:before, &:active, &:focus {
+        background-color: lighten(#faf3dd, 5%);
+        transition: all .3s;
+    }
+}
+
+.software {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%), #f6ac69;
+
+    &:hover, &:before, &:active, &:focus {
+        background-color: darken(#f6ac69, 20%);
+        transition: all .3s;
+    }
+
+    &:focus {
+        border: 2px solid black;
+    }
+}
+
+.hardware {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%), #84acce;
+
+    &:hover, &:before, &:active, &:focus {
+        background-color: darken(#84acce, 20%);
+        transition: all .3s;
+    }
+}
+
+// Buttons for admins
+.hardware-2 {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%), #84acce;
+    padding: rem(5) rem(10);
+    border: 1px solid black;
+    color: black;
+
+    &:hover, &:before, &:active, &:focus {
+        background-color: lighten(#84acce, 20%);
+        transition: all .3s;
+        text-decoration: none;
+        color: lighten(black, 10%);
+    }
+}
+
+.software-2 {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%), #f6ac69;
+    padding: rem(5) rem(10);
+    border: 1px solid black;
+    color: black;
+
+    &:hover, &:before, &:active, &:focus {
+        background-color: lighten(#f6ac69, 20%);
+        transition: all .3s;
+        text-decoration: none;
+        color: lighten(black, 10%);
+    }
+}
+
+.items {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%), #9bf6ff;
+
+    &:hover, &:before, &:active, &:focus {
+        background-color: darken(#9bf6ff, 20%);
+        transition: all .3s;
+    }
+}
+
+.tips {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%), #caffbf;
+
+    &:hover, &:before, &:active, &:focus {
+        background-color: darken(#caffbf, 20%);
+        transition: all .3s;
+    }
+}
+
+.recommendations {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%), #ffc6ff;
+
+    &:hover, &:before, &:active, &:focus {
+        background-color: darken(#ffc6ff, 20%);
+        transition: all .3s;
+    }
+}
+
+.activities {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%), #ffadad;
+
+    &:hover, &:before, &:active, &:focus {
+        background-color: darken(#ffadad, 20%);
+        transition: all .3s;
+    }
+}
+
+.icon-header {
+    font-size: rem(18);
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: rem(16);
+
+    @include media($sm-up) {
+        grid-gap: rem(24);
+    }
+}
+
+.button-grid__item {
+    position: relative;
+}
+
+.button__category {
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid rgba(198, 198, 198, 0.7);
+    box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #231c07;
+
+    padding: rem(16);
+    min-height: rem(150);
+    height: 100%;
+    min-height: rem(120);
+
+    @include media($xs-up) {
+        min-height: rem(150);
+    }
+
+    @include media($sm-up) {
+        padding: rem(32);
+        min-height: rem(250);
+    }
+
+    @include media($md-up) {
+        min-height: rem(300);
+    }
+
+    @include media($xxl-up) {
+        min-height: rem(800);
+    }
+
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.button__icon {
+    font-size: rem(18);
+    flex: 0;
+
+    @include media($sm-up) {
+        font-size: rem(54);
+    }
+
+    .fa, .fas, .far {
+        @include media($xxl-up) {
+            font-size: rem(150);
+        }
+    }
+}
+
+.button__text {
+    flex: 0;
+    font-size: rem(14);
+
+    @include media($sm-up) {
+        font-size: rem(48);
+    }
+
+    @include media($xxl-up) {
+        font-size: rem(90);
+    }
+}
+
+.button__top {
+    padding-top: rem(20);
+    bottom: rem(45);
+    right: rem(25);
+    display: none;
+}
+
+.btn {
+    @include media($xxl-up) {
+        font-size: rem(60);
+        min-height: rem(100);
+    }
+}
+
+.fa, .fas, .far {
+    @include media($xxl-up) {
+        font-size: rem(100);
+    }
+}
