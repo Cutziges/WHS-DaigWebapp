@@ -64,6 +64,12 @@ class DocsController extends Controller
      */
     public function create(Request $request, $id)
     {
+        // Find item by id
+        $item = Item::find($id);
+
+        // Category
+        $category = $item->category_id;
+
         // Validation
         $validator = Validator::make($request->all(), [
             'title' => 'required|max:255',
@@ -75,12 +81,6 @@ class DocsController extends Controller
                 ->withInput()
                 ->withErrors($validator);
         } else {
-            // Find item by id
-            $item = Item::find($id);
-
-            // Category
-            $category = $item->category_id;
-
             // Process the submitted file
             $file = $request->file('file');
             $extension = $file->guessExtension();
